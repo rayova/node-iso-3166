@@ -1,13 +1,13 @@
-export type ISO_3116_2 = ISO_3116_2_CA | ISO_3116_2_US;
+export type ISO_3166_2 = ISO_3166_2_CA | ISO_3166_2_US;
 
-export type ISO_3116_2_CA = `CA-${ISO_3116_2_CA__sub}`;
-export type ISO_3116_2_CA__sub = keyof typeof ISO_3116_2_CA__sub__MAP;
+export type ISO_3166_2_CA = `CA-${ISO_3166_2_CA__sub}`;
+export type ISO_3166_2_CA__sub = keyof typeof ISO_3166_2_CA__sub__MAP;
 
-export type ISO_3116_2_US = `US-${ISO_3116_2_US__sub}`;
-export type ISO_3116_2_US__sub = keyof typeof ISO_3116_2_US__sub__MAP;
+export type ISO_3166_2_US = `US-${ISO_3166_2_US__sub}`;
+export type ISO_3166_2_US__sub = keyof typeof ISO_3166_2_US__sub__MAP;
 
 // https://en.wikipedia.org/wiki/ISO_3166-2:CA
-export const ISO_3116_2_CA__sub__MAP = {
+export const ISO_3166_2_CA__sub__MAP = {
   AB: 'Alberta',
   BC: 'British Columbia',
   MB: 'Manitoba',
@@ -24,7 +24,7 @@ export const ISO_3116_2_CA__sub__MAP = {
 };
 
 // https://en.wikipedia.org/wiki/ISO_3166-2:US
-export const ISO_3116_2_US__sub__MAP = {
+export const ISO_3166_2_US__sub__MAP = {
   // states
   AL: 'Alabama',
   AK: 'Alaska',
@@ -87,21 +87,21 @@ export const ISO_3116_2_US__sub__MAP = {
   VI: 'U.S. Minor Outlying Islands',
 };
 
-export const ISO_3116_2_CA__MAP = Object.fromEntries(
-  Object.entries(ISO_3116_2_CA__sub__MAP).map(([sub, long]) => [
+export const ISO_3166_2_CA__MAP = Object.fromEntries(
+  Object.entries(ISO_3166_2_CA__sub__MAP).map(([sub, long]) => [
     `CA-${sub}`,
     long,
   ])
-) as Record<ISO_3116_2_CA, string>;
+) as Record<ISO_3166_2_CA, string>;
 
-export const ISO_3116_2_US__MAP = Object.fromEntries(
-  Object.entries(ISO_3116_2_US__sub__MAP).map(([sub, long]) => [
+export const ISO_3166_2_US__MAP = Object.fromEntries(
+  Object.entries(ISO_3166_2_US__sub__MAP).map(([sub, long]) => [
     `US-${sub}`,
     long,
   ])
-) as Record<ISO_3116_2_US, string>;
+) as Record<ISO_3166_2_US, string>;
 
-export const ISO_3116_2__MAP: Record<ISO_3116_2, string> = {
-  ...ISO_3116_2_CA__MAP,
-  ...ISO_3116_2_US__MAP,
+export const ISO_3166_2__MAP: Record<ISO_3166_2, string> = {
+  ...ISO_3166_2_CA__MAP,
+  ...ISO_3166_2_US__MAP,
 };
