@@ -19,7 +19,7 @@
     "size": "size-limit",
     "analyze": "size-limit --why",
     "typecheck": "tsc --noEmit",
-    "format": "prettier --write ./src/*.ts"
+    "format": "prettier --write \"./src/**/*.ts\""
   },
   "peerDependencies": {},
   "husky": {
